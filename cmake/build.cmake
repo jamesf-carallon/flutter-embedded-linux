@@ -269,7 +269,7 @@ if(${BACKEND_TYPE} MATCHES "^DRM-(GBM|EGLSTREAM)$")
   endif()
 endif()
 
-set(FLUTTER_EMBEDDER_LIB "${CMAKE_CURRENT_SOURCE_DIR}/build/libflutter_engine.so")
+set(FLUTTER_EMBEDDER_LIB "$ENV{STAGING_DIR}/usr/lib/libflutter_engine.so")
 set(CMAKE_SKIP_RPATH true)
 target_link_libraries(${TARGET}
   PRIVATE
